@@ -1,4 +1,4 @@
-<?php $page_title = 'Over de Phil Collins Detector'; ?>
+<?php $page_title = 'Over de Coldplay Detector'; ?>
 <?php include 'includes/head.html'; ?>
 <body>
     <div class="container-fluid">
@@ -7,22 +7,22 @@
 
             <div class="row mb-4">
                 <div class="col-md-9">
-                    <h1>Over de Phil Collins Detector</h1>
+                    <h1>Over de Coldplay Detector</h1>
                     
                     <div class="card mb-3">
                         <div class="card-body">
-                            <p>Je zet de radio aan. Eerst verkeersinformatie, dan een reclame, en dan… ja hoor: die onvermijdelijke drumfill. Was dat nou wéér Phil Collins?
+                            <p>Je zet de radio aan. Eerst verkeersinformatie, dan een reclame, en dan… ja hoor: die onvermijdelijke drumfill. Was dat nou wéér Coldplay?
                                 Ik heb het gevoel dat hij wel heel vaak op de radio te horen is, en het leek me leuk om dat gevoel eens te testen met cijfers in plaats van zuchten.
-                                Niet omdat ik iets tegen de persoon Phil Collins heb — integendeel, alle respect — maar mijn oren zijn het niet altijd eens met zijn muzikale keuzes.
+                                Niet omdat ik iets tegen de persoon Coldplay heb — integendeel, alle respect — maar mijn oren zijn het niet altijd eens met zijn muzikale keuzes.
                             </p>
-                            <p>Zo ontstond de Phil Collins Detector: een speels, lichtelijk obsessief project dat bijhoudt hoe vaak Phil Collins voorbij komt op Nederlandse radiozenders. Geen grote kruistocht, wel een knipoog en een dosis data. De site luistert mee met publieke “now playing”-informatie, telt de draaibeurten, en zet alles netjes op een rij: per zender, per dag, per uur. Je ziet trends, piekmomenten, en kunt zelf ontdekken op welke zenders je de grootste kans hebt om “In the Air Tonight” of “Sussudio” te horen terwijl je net je boterham smeert.
+                            <p>Zo ontstond de Coldplay Detector: een speels, lichtelijk obsessief project dat bijhoudt hoe vaak Coldplay voorbij komt op Nederlandse radiozenders. Geen grote kruistocht, wel een knipoog en een dosis data. De site luistert mee met publieke “now playing”-informatie, telt de draaibeurten, en zet alles netjes op een rij: per zender, per dag, per uur. Je ziet trends, piekmomenten, en kunt zelf ontdekken op welke zenders je de grootste kans hebt om “In the Air Tonight” of “Sussudio” te horen terwijl je net je boterham smeert.
                             </p>
                             <h5>Belangrijk om te weten:
                             </h5>
-                            <p>Dit is geen anti-Phil-campagne. Ik heb niets tegen de persoon Phil Collins; mijn smaak en die van de radiozenders botsen alleen soms.
+                            <p>Dit is geen anti-Coldplay-campagne. Ik heb niets tegen de persoon Coldplay; mijn smaak en die van de radiozenders botsen alleen soms.
                                 De detector is bedoeld voor plezier, nieuwsgierigheid en een beetje radiokennis. Lach mee, discussieer gerust, en verwonder je over hoe vaak bepaalde hits blijven terugkomen.
                                 Data is eerlijk, maar niet onfeilbaar. Zie je een vreemde registratie of mis je een nummer? Laat het weten — dan schaaf ik bij.
-                                Dus: klik rond, vergelijk zenders, en kijk hoe vaak het nou écht gebeurt. Misschien bevestigt het je gevoel. Misschien verrast het je compleet. En mocht die drumfill weer eens door je keuken galmen, weet dan: de Phil Collins Detector telt mee.    
+                                Dus: klik rond, vergelijk zenders, en kijk hoe vaak het nou écht gebeurt. Misschien bevestigt het je gevoel. Misschien verrast het je compleet. En mocht die drumfill weer eens door je keuken galmen, weet dan: de Coldplay Detector telt mee.    
                             </p>
                      </div>
                     </div>
@@ -31,8 +31,8 @@
                         <div class="card-body">
                             <h5>Technische details</h5>
                             <ul>
-                                <li>De Phil Collins Detector draait op minimale hardware, een Raspberry Pi Zero van een paar tientjes, in mijn garage.</li>
-                                <li>Alle detecties worden ge-upload naar een webserver, die het laat zien op <a href="https://philcollinsdetector.nl">philcollinsdetector.nl</a>.</li>
+                                <li>De Coldplay Detector draait op minimale hardware, een Raspberry Pi Zero van een paar tientjes, in mijn garage.</li>
+                                <li>Alle detecties worden ge-upload naar een webserver, die het laat zien op <a href="https://Coldplaycollinsdetector.nl">Coldplaycollinsdetector.nl</a>.</li>
                             </ul>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                     <div class="card mb-3">
                         <div class="card-body">
                             <h6>Doneren</h6>
-                            <p class="small mb-0">De Phil Collins Detector kan natuurlijk niet helemaal voor niets draaien. Vind je het leuk en wil je een bijdrage leveren? Dat kan via de knop hieronder. </p>
+                            <p class="small mb-0">De Coldplay Detector kan natuurlijk niet helemaal voor niets draaien. Vind je het leuk en wil je een bijdrage leveren? Dat kan via de knop hieronder. </p>
                             <br>
                             <form action="https://www.paypal.com/donate" method="post" target="_top">
                             <input type="hidden" name="hosted_button_id" value="2L7TXP67GNGD4" />

@@ -6,7 +6,7 @@
 1. **main.py** - Updated `normalize_song_title()` function
    - Now converts artist and song titles to consistent title case
    - Handles apostrophes correctly (e.g., "I Can't Dance" not "I Can'T Dance")
-   - Eliminates duplicates like "PHIL COLLINS" vs "Phil Collins"
+   - Eliminates duplicates like "Coldplay" vs "Coldplay"
 
 2. **normalize_db.py** - Created script to fix existing database entries
    - Normalizes all existing songs in the database
@@ -107,7 +107,7 @@ Both SQLite and MySQL will use these tables:
 
 ### Normalization:
 - [ ] Run normalize_db.py
-- [ ] Check "PHIL COLLINS" became "Phil Collins"
+- [ ] Check "Coldplay" became "Coldplay"
 - [ ] Check "I CAN'T DANCE" became "I Can't Dance"
 - [ ] Check "I Can't Dance" and "I can't dance" are now same
 - [ ] Verify detection still works

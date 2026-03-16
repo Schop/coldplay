@@ -53,7 +53,7 @@ class Template {
     // Helper method for common page variables
     public function setPageData($title = '', $data = []) {
         $defaults = [
-            'page_title' => $title ?: 'Phil Collins Detector',
+            'page_title' => $title ?: 'Coldplay Detector',
             'current_year' => date('Y'),
             'base_url' => '/'
         ];

@@ -220,7 +220,7 @@ def normalize_song_title(title):
     normalized = re.sub(r'^#\d+:\s*', '', title)
     normalized = normalized.strip()
     
-    # Normalize to title case for consistent storage (e.g., "PHIL COLLINS" -> "Phil Collins")
+    # Normalize to title case for consistent storage (e.g., "Coldplay" -> "Coldplay")
     # This prevents duplicates due to different capitalization
     # We use a custom title case that handles apostrophes correctly
     words = []

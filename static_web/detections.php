@@ -1,4 +1,4 @@
-<?php $page_title = 'Alle Detecties - Phil Collins Detector'; ?>
+<?php $page_title = 'Alle Detecties - Coldplay Detector'; ?>
 <?php include 'includes/head.html'; ?>
 
 <body>
@@ -6,8 +6,8 @@
         <main>
             <?php include 'includes/nav.html'; ?>
 
-            <h1>Alle Phil Collins Detecties</h1>
-            <p class="text-muted">Complete lijst van alle gedetecteerde Phil Collins nummers op Nederlandse radio</p>
+            <h1>Alle Coldplay Detecties</h1>
+            <p class="text-muted">Complete lijst van alle gedetecteerde Coldplay nummers op Nederlandse radio</p>
 
             <!-- Results -->
             <div id="detectionsContainer">

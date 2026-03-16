@@ -1,6 +1,6 @@
 # Radio Checker
 
-A Python script that monitors Dutch radio stations for songs by target artists (Phil Collins, Genesis), storing detected songs in a SQLite database with red console alerts.
+A Python script that monitors Dutch radio stations for songs by target artists (Coldplay, Genesis), storing detected songs in a SQLite database with red console alerts.
 
 ## Features
 
@@ -32,7 +32,7 @@ Station configurations are stored in `config.yaml`:
 
 # Target artists and songs to check
 target_artists:
-  - Phil Collins
+  - Coldplay
   - Genesis
 
 target_songs:
@@ -96,7 +96,7 @@ python main.py
 
 The script will:
 - Display current songs every minute for each station
-- Alert in red when a target artist (Phil Collins/Genesis) is detected
+- Alert in red when a target artist (Coldplay/Genesis) is detected
 - Log all target artist songs to `radio_songs.db` with timestamps
 
 ### 2. View Results via Web Dashboard (Optional)
@@ -210,7 +210,7 @@ Once configured, the application will automatically post updates to your Bluesky
    - Only processes new songs
 
 3. **Check target artists**:
-   - Searches for "Phil Collins" and "Genesis" (case-insensitive)
+   - Searches for "Coldplay" and "Genesis" (case-insensitive)
    - If found: logs to database and prints red alert
 
 4. **Loop**: Waits 60 seconds and repeats

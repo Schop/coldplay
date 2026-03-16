@@ -91,7 +91,7 @@ def insert_from_command_line():
     """Insert song using command line arguments"""
     if len(sys.argv) < 4:
         print("Usage: python insert_song.py <station> <artist> <song> [timestamp]")
-        print("Example: python insert_song.py 'Radio 538' 'Phil Collins' 'In The Air Tonight'")
+        print("Example: python insert_song.py 'Radio 538' 'Coldplay' 'In The Air Tonight'")
         return False
     
     station = sys.argv[1]

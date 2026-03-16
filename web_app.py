@@ -1,6 +1,6 @@
 """
 Simple Flask web interface for RadioDetector
-Displays detected Phil Collins and Genesis songs from SQLite database
+Displays detected Coldplay and Genesis songs from SQLite database
 Lightweight and Pi Zero friendly
 """
 
@@ -233,7 +233,7 @@ def index():
         today_count=today_count,
         first_timestamp=first_timestamp,
         last_timestamp=last_timestamp,
-        title="Phil Collins Detector"
+        title="Coldplay Detector"
     )
 
 @app.route('/about')

@@ -3,7 +3,7 @@
 require_once 'includes/template.php';
 
 // Set up template with page data
-$template->setPageData('{stationName} - Phil Collins Detector', [
+$template->setPageData('{stationName} - Coldplay Detector', [
     'station_name' => '{stationName}',
     'api_base' => '/api.php'
 ]);

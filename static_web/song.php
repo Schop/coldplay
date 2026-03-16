@@ -1,4 +1,4 @@
-<?php $page_title = '{songName} - Phil Collins Detector'; ?>
+<?php $page_title = '{songName} - Coldplay Detector'; ?>
 <?php include 'includes/head.html'; ?>
 
 <body>

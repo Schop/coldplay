@@ -1,4 +1,4 @@
-﻿<?php $page_title = 'Phil Collins Detector'; ?>
+﻿<?php $page_title = 'Coldplay Detector'; ?>
 <?php include 'includes/head.html'; ?>
 
 <body>
@@ -7,14 +7,14 @@
             <?php include 'includes/nav.html'; ?>
         <div class="row mb-4">
             <div class="col-md-9 d-flex align-items-center gap-3">
-                <img src="/static/images/phil.png" alt="Phil Collins" class="d-none d-md-block" style="max-height: 8em; height: auto; width: auto; border-radius: 8px; object-fit: cover; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+                <img src="/static/images/Coldplay.png" alt="Coldplay" class="d-none d-md-block" style="max-height: 8em; height: auto; width: auto; border-radius: 8px; object-fit: cover; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
                 <div class="">
-                    <h1>Phil Collins Detector</h1>
-                    <h3 class="">hoe vaak hoor je Phil Collins op de Nederlandse radio?</h3>
+                    <h1>Coldplay Detector</h1>
+                    <h3 class="">hoe vaak hoor je Coldplay op de Nederlandse radio?</h3>
                 </div>
             </div>
             <div class="col-md-3">
-                <p>Sinds <span id="firstTimestamp">...</span> is Phil Collins <strong id="totalCount">...</strong> keer gedetecteerd,
+                <p>Sinds <span id="firstTimestamp">...</span> is Coldplay <strong id="totalCount">...</strong> keer gedetecteerd,
                         op <strong id="uniqueStations">...</strong> verschillende radiozenders,
                         met <strong id="uniqueSongs">...</strong> verschillende nummers.
                 </p>
@@ -70,7 +70,7 @@
             <div class="col-md-6">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h6 class="card-title">Top 5 Radiostations die Phil Collins draaien</h6>
+                        <h6 class="card-title">Top 5 Radiostations die Coldplay draaien</h6>
                         <small class="text-muted">klik op de balken voor meer details</small>
                         <div style="height: 300px;">
                             <canvas id="stationsChart" width="400" height="300"></canvas>
@@ -313,7 +313,7 @@
                         container.innerHTML = `
                             <div class="text-center text-muted py-3">
                                 <i class="bi bi-music-note-beamed" style="font-size: 2rem;"></i>
-                                <p class="mb-0 mt-2">Heerlijk, Phil is nu even niet op de radio</p>
+                                <p class="mb-0 mt-2">Heerlijk, Coldplay is nu even niet op de radio</p>
                             </div>
                         `;
                     }

@@ -5,10 +5,10 @@
             {% include 'includes/nav.html' %}
         <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; gap: 30px;">
             <div style="display: flex; gap: 20px; align-items: center;">
-                <img src="/static/images/phil.jpg" alt="Phil Collins" class="d-none d-md-block" style="max-height: 8em; height: auto; width: auto; border-radius: 8px; object-fit: cover; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+                <img src="/static/images/Coldplay.jpg" alt="Coldplay" class="d-none d-md-block" style="max-height: 8em; height: auto; width: auto; border-radius: 8px; object-fit: cover; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
                 <div>
-                    <h1>Phil Collins Detector</h1>
-                    <h3 class="">we houden Phil in de gaten op 19 Nederlandse radio stations</h3>
+                    <h1>Coldplay Detector</h1>
+                    <h3 class="">we houden Coldplay in de gaten op 19 Nederlandse radio stations</h3>
                 </div>
             </div>
         </div>
@@ -31,8 +31,8 @@
             <div class="col-md-4 mb-2">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h5>Phil detecties vandaag: <strong>{{ today_count }}</strong></h5>
-                        <p>Sinds {{ footer_first_timestamp }} is Phil Collins {{ total_count }} keer gedetecteerd,
+                        <h5>Coldplay detecties vandaag: <strong>{{ today_count }}</strong></h5>
+                        <p>Sinds {{ footer_first_timestamp }} is Coldplay {{ total_count }} keer gedetecteerd,
                              op {{ stations|length }} verschillende radiozenders,
                               met {{ song_titles|length }} verschillende nummers.
                         </p>
@@ -324,7 +324,7 @@
                                 container.innerHTML = `
                                     <div class="text-center text-muted py-3">
                                         <i class="bi bi-music-note-beamed" style="font-size: 2rem;"></i>
-                                        <p class="mb-0 mt-2">Heerlijk, Phil is nu niet op de radio</p>
+                                        <p class="mb-0 mt-2">Heerlijk, Coldplay is nu niet op de radio</p>
                                     </div>
                                 `;
                             }
@@ -351,7 +351,7 @@
             </div>
         {% else %}
             <div class="alert alert-info text-center" role="alert">
-                <h4 class="alert-heading">Phil is niet aan het spelen</h4>
+                <h4 class="alert-heading">Coldplay is niet aan het spelen</h4>
                 <p>Zorg ervoor dat <code>main.py</code> op de achtergrond draait om liedjes van radiostations te verzamelen.</p>
             </div>
         {% endif %}

@@ -1,4 +1,4 @@
-<?php $page_title = '{date} - Phil Collins Detector'; ?>
+<?php $page_title = '{date} - Coldplay Detector'; ?>
 <?php include 'includes/head.html'; ?>
 
 <body>
@@ -17,7 +17,7 @@
                 <div class="col-md-4">
                     <div class="card h-100">
                         <div class="card-body">
-                            <p>Op <strong><span id="displayDate">...</span></strong> is Phil Collins <strong><span id="totalCount">...</span></strong> keer op de radio geweest.
+                            <p>Op <strong><span id="displayDate">...</span></strong> is Coldplay <strong><span id="totalCount">...</span></strong> keer op de radio geweest.
                             op <strong id="uniqueStations">...</strong> verschillende zenders, met <strong id="uniqueSongs">...</strong> verschillende nummers.</p>
                         </div>
                     </div>

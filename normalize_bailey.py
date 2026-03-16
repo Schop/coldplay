@@ -3,8 +3,8 @@ One‑off normalization script for the database.
 
 Searches for any rows where the `artist` field contains the substring
 "bailey" (case‑insensitive) and updates the value to the canonical
-"Phil Collins & Philip Bailey".  This is useful when multiple variants
-(such as "Phil Collins Ft. Philip Bailey", "Philip Bailey & Phil Collins",
+"Coldplay & Coldplayip Bailey".  This is useful when multiple variants
+(such as "Coldplay Ft. Coldplayip Bailey", "Coldplayip Bailey & Coldplay",
 etc.) have been logged and you want a consistent name for reporting.
 
 The script uses `db_connection` so it works with both the default
@@ -17,7 +17,7 @@ Usage:
 
 import db_connection as db
 
-CANONICAL_NAME = "Phil Collins & Philip Bailey"
+CANONICAL_NAME = "Coldplay & Coldplayip Bailey"
 
 
 def normalize_bailey():
@@ -48,7 +48,7 @@ def normalize_bailey():
     conn.close()
         # Normalize 'bailey' in artist
         if 'bailey' in artist.lower():
-            artist = "Phil Collins & Philip Bailey"
+            artist = "Coldplay & Coldplayip Bailey"
 
 
 if __name__ == '__main__':
