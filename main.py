@@ -695,12 +695,12 @@ def main():
                                     log_print(f'Could not post to Bluesky: {e}', Fore.YELLOW)
 
                                 import subprocess
-                                #result = subprocess.run(['python3', 'upload_db.py'], 
-                                #                      capture_output=True, text=True, timeout=30)
-                                #if result.returncode == 0:
-                                #    log_print(f"✓ Database uploaded to web server", Fore.GREEN)
-                                #else:
-                                #    log_print(f"⚠️ Database upload failed: {result.stderr.strip()}", Fore.YELLOW)
+                                result = subprocess.run(['python3', 'upload_db.py'], 
+                                                      capture_output=True, text=True, timeout=30)
+                                if result.returncode == 0:
+                                    log_print(f"✓ Database uploaded to web server", Fore.GREEN)
+                                else:
+                                    log_print(f"⚠️ Database upload failed: {result.stderr.strip()}", Fore.YELLOW)
                             except Exception as e:
                                 log_print(f"⚠️ Database upload error: {e}", Fore.YELLOW)
                             log_print("=" * 60, Fore.RED, Style.BRIGHT)
