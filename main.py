@@ -662,24 +662,17 @@ def main():
                         # Check if artist is in target list
                         matched = False
                         for target_artist in TARGET_ARTISTS:
-                            if target_artist == "Phil Collins" and target_artist.lower() in normalized_artist.lower():
-                                matched = True
-                                # Normalize artist if 'bailey' is present
-                                if 'bailey' in normalized_artist.lower():
-                                    normalized_artist = "Phil Collins & Philip Bailey"
-                                else:
-                                    normalized_artist = "Phil Collins"
-                                break
-                            if target_artist == "Genesis" and target_artist.lower() == normalized_artist.lower():
+                            if target_artist.lower() in normalized_artist.lower():
                                 matched = True
                                 break
 
                         # Check if song is in target list (using normalized song title)
                         if not matched:
-                            for target_song in TARGET_SONGS:
-                                if target_song and target_song.lower() in normalized_song.lower():
-                                    matched = True
-                                    break
+                            if TARGET_SONGS:
+                                for target_song in TARGET_SONGS:
+                                    if target_song and target_song.lower() in normalized_song.lower():
+                                        matched = True
+                                        break
 
                         # Log to database and print if matched
                         if matched:
@@ -696,18 +689,18 @@ def main():
                             try:
                                 # Try posting to Bluesky (non-fatal)
                                 try:
-                                    bluesky_post.post_song(normalized_artist, normalized_song, station=station)
+                                    #bluesky_post.post_song(normalized_artist, normalized_song, station=station)
                                     log_print('Posted detection to Bluesky', Fore.GREEN)
                                 except Exception as e:
                                     log_print(f'Could not post to Bluesky: {e}', Fore.YELLOW)
 
                                 import subprocess
-                                result = subprocess.run(['python3', 'upload_db.py'], 
-                                                      capture_output=True, text=True, timeout=30)
-                                if result.returncode == 0:
-                                    log_print(f"✓ Database uploaded to web server", Fore.GREEN)
-                                else:
-                                    log_print(f"⚠️ Database upload failed: {result.stderr.strip()}", Fore.YELLOW)
+                                #result = subprocess.run(['python3', 'upload_db.py'], 
+                                #                      capture_output=True, text=True, timeout=30)
+                                #if result.returncode == 0:
+                                #    log_print(f"✓ Database uploaded to web server", Fore.GREEN)
+                                #else:
+                                #    log_print(f"⚠️ Database upload failed: {result.stderr.strip()}", Fore.YELLOW)
                             except Exception as e:
                                 log_print(f"⚠️ Database upload error: {e}", Fore.YELLOW)
                             log_print("=" * 60, Fore.RED, Style.BRIGHT)
