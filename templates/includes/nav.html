@@ -1,0 +1,82 @@
+<nav class="navbar navbar-light bg-light mb-4">
+    <div class="container-fluid">
+        <div class="w-100">
+            <ul class="navbar-nav me-auto flex-row justify-content-start gap-3">
+                <li class="nav-item">
+                    <a class="nav-link{% if request.path == '/' %} active{% endif %}" href="/">
+                        <i class="bi bi-house"></i>
+                        <span class="d-none d-lg-inline ms-1">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link{% if request.path == '/about' %} active{% endif %}" href="/about">
+                        <i class="bi bi-info-circle"></i>
+                        <span class="d-none d-lg-inline ms-1">About</span>
+                    </a>
+                </li>
+                {% if not auth_enabled or logged_in %}
+                <li class="nav-item">
+                    <a class="nav-link{% if request.path == '/logs' %} active{% endif %}" href="/logs">
+                        <i class="bi bi-file-text"></i>
+                        <span class="d-none d-lg-inline ms-1">Logs</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link{% if request.path == '/admin' %} active{% endif %}" href="/admin">
+                        <i class="bi bi-tools"></i>
+                        <span class="d-none d-lg-inline ms-1">Maintenance</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link{% if request.path == '/settings' %} active{% endif %}" href="/settings">
+                        <i class="bi bi-gear"></i>
+                        <span class="d-none d-lg-inline ms-1">Settings</span>
+                    </a>
+                </li>
+                {% endif %}
+                {% if auth_enabled %}
+                <li class="nav-item">
+                    {% if logged_in %}
+                    <a class="nav-link" href="/logout">
+                        <i class="bi bi-box-arrow-right"></i>
+                        <span class="d-none d-lg-inline ms-1">Logout</span>
+                    </a>
+                    {% else %}
+                    <a class="nav-link" href="/login">
+                        <i class="bi bi-box-arrow-in-right"></i>
+                        <span class="d-none d-lg-inline ms-1">Login</span>
+                    </a>
+                    {% endif %}
+                </li>
+                {% endif %}
+                <li class="nav-item ms-auto">
+                    <span class="navbar-text text-dark">
+                        <small id="uptime">Uptime: ...</small>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<script>
+    // Update uptime periodically
+    function updateUptime() {
+        fetch('/api/uptime')
+            .then(response => response.json())
+            .then(data => {
+                const uptimeEl = document.getElementById('uptime');
+                if (data.success) {
+                    uptimeEl.textContent = `Uptime: ${data.uptime}`;
+                } else {
+                    uptimeEl.textContent = 'Uptime: Unknown';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching uptime:', error);
+            });
+    }
+    
+    // Update immediately and then every 10 seconds
+    updateUptime();
+    setInterval(updateUptime, 10000);
+</script>

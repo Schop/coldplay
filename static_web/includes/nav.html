@@ -1,0 +1,45 @@
+<nav class="navbar navbar-light bg-light mb-4">
+    <div class="container-fluid d-flex align-items-center">
+        <ul class="navbar-nav flex-row justify-content-start gap-3">
+            <li class="nav-item">
+                <a class="nav-link" href="index.php">
+                    <i class="bi bi-house"></i>
+                    <span class="d-none d-lg-inline ms-1">Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.php">
+                    <i class="bi bi-info-circle"></i>
+                    <span class="d-none d-lg-inline ms-1">Over / FAQs</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="detections.php">
+                    <i class="bi bi-table"></i>
+                    <span class="d-none d-lg-inline ms-1">Alle Detecties</span>
+                </a>
+            </li>
+        </ul>
+        <span class="navbar-text ms-auto"><h5>Phil detecties vandaag: <strong id="todayCountnav">...</strong></h5></span>
+    </div>
+</nav>
+
+<script>
+    // Update the small 'today' counter on all static pages
+    function updateTodayCountNav() {
+        fetch('/api.php/api/index-data')
+            .then(response => response.json())
+            .then(data => {
+                const el = document.getElementById('todayCountnav');
+                if (!el) return;
+                el.textContent = (data && (data.today_count !== undefined)) ? data.today_count : '0';
+            })
+            .catch(() => {
+                /* silently ignore - keep existing value */
+            });
+    }
+
+    // Initial update + periodic refresh
+    updateTodayCountNav();
+    setInterval(updateTodayCountNav, 30000);
+</script>
