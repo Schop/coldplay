@@ -24,7 +24,7 @@ def format_date_no_leading_zero(dt, format_str):
 app = Flask(__name__)
 # Generate a random secret key for sessions
 app.secret_key = secrets.token_hex(32)
-DB_PATH = 'radio_songs.db'
+DB_PATH = 'coldplay_songs.db'
 LOG_FILE = 'radio.log'
 UPTIME_FILE = '.uptime'
 
