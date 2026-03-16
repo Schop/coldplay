@@ -551,8 +551,7 @@ def main():
     if PRIORITY_MYONLINERADIO:
         log_print(f"- Prioritizing myonlineradio for: {', '.join(PRIORITY_MYONLINERADIO)}")
     log_print(f"- Target artists: {', '.join(TARGET_ARTISTS) if TARGET_ARTISTS else 'None'}")
-    if TARGET_SONGS:
-        log_print(f"- Target songs: {', '.join(TARGET_SONGS) if TARGET_SONGS else 'None'}")
+
     log_print("=" * 60)
     
     # Create database cursor
